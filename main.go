@@ -7,7 +7,10 @@ import (
 
     "github.com/tmc/langchaingo/llms"
     "github.com/tmc/langchaingo/llms/ollama"
+	"github.com/tmc/langchaingo/vectorstores/pgvector"
 )
+
+var store pgvector.Store
 
 func main() {
     llm, err := ollama.New(ollama.WithModel("llama2"))
